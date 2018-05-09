@@ -14,27 +14,27 @@ console.log(name);
       return console.log('Unable to connect to MongoDB Server');
     }
     console.log('Connected to MongoDB Server.');
-    // db.collection('Todos').insertOne({
-    //   text: 'Something new to node.',
-    //   completed: false
-    // }, (err, result) => {
-    //   if(err){
-    //     return console.log('Unable to proceed insert todo', err);
-    //   }
-    //   console.log(JSON.stringify(result.ops, undefined, 2));
-    // });
+    db.collection('Todos').insertOne({
+      text: 'Something new to node.',
+      completed: false
+    }, (err, result) => {
+      if(err){
+        return console.log('Unable to proceed insert todo', err);
+      }
+      console.log(JSON.stringify(result.ops, undefined, 2));
+    });
 
-    // db.collection('Users').insertOne({
-    //   name: 'Andrew',
-    //   age: 25,
-    //   location: 'Maldives'
-    // },(err, result) => {
-    //   if(err){
-    //     return console.log('Unable to proceed insert User', err);
-    //   }
-    //   console.log(JSON.stringify(result.ops, undefined, 2));
-    //   console.log(result.ops[0]._id.getTimestamp());
-    // });
+    db.collection('Users').insertOne({
+      name: 'Andrew',
+      age: 25,
+      location: 'Maldives'
+    },(err, result) => {
+      if(err){
+        return console.log('Unable to proceed insert User', err);
+      }
+      console.log(JSON.stringify(result.ops, undefined, 2));
+      console.log(result.ops[0]._id.getTimestamp());
+    });
 
     db.close();
   });
