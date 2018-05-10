@@ -26,6 +26,8 @@ app.listen(3000, () => {
   console.log('Server started on 3000');
 });
 
+module.exports = {app}
+
 
 // var newTodo = new Todo({
 //   text: 'You eat',
