@@ -1,3 +1,5 @@
+require('./config/config')
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
@@ -9,7 +11,7 @@ var {User} = require('./models/user');
 
 
 var app = express();
-const port = process.env.PORT || 3000;
+const port =  3000;
 
 app.use(bodyParser.json());
 
@@ -98,39 +100,3 @@ app.listen(port, () => {
 });
 
 module.exports = {app}
-
-
-// var newTodo = new Todo({
-//   text: 'You eat',
-//   completed: true,
-//   completedAt: 4
-// });
-//
-// newTodo.save().then((doc) => {
-//   console.log('Sucessfully Saved.', doc);
-// }, (e) => {
-//   console.log('Unable to save.');
-// });
-//
-//
-// var otherTodo = new Todo({
-//   text: "   Have to eat   ",
-//   completed: true,
-//   completedAt: 15
-// });
-//
-// var user = new User({
-//   email: 'andrew@yahoo.com'
-// });
-//
-// user.save().then((doc) => {
-//   console.log('Sucessfully saved.', doc );
-// }, (err) => {
-//   console.log('Unable to save.')
-// })
-//
-// otherTodo.save().then((doc) => {
-//   console.log('Sucessfully Saved.', doc);
-// }, (e) => [
-//   console.log('Unable to save.')
-// ])
