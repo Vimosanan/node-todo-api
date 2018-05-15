@@ -10,11 +10,11 @@ const bcrypt = require('bcryptjs');
 //   });
 // });
 
-var hashedPassword = '$2a$10$yNnJc3yEPr1jCdmwQhyWQODEg9Eaxt63/H2yJ3Tg2rGD3wMG3Bgqa';
-
-bcrypt.compare('123abc', hashedPassword, (err, res) => {
-  console.log(res);
-});
+// var hashedPassword = '$2a$10$yNnJc3yEPr1jCdmwQhyWQODEg9Eaxt63/H2yJ3Tg2rGD3wMG3Bgqa';
+//
+// bcrypt.compare('123abc', hashedPassword, (err, res) => {
+//   console.log(res);
+// });
 
 // var data = {
 //   id: 10
